@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>    
+     *{margin:0;
+       padding:0;
+            }
+     .img1{
+         width: 100%;
+         height:600px;
+         background-image: url("image/img1.png");
+         background-size:cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+     nav{
+         box-sizing: border-box;
+         height:100px;
+         width:100%;
+         border:1px solid black;
+         background: rgb(238,174,202);
+         background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+    } 
+    nav img{
+        float: left;
+        margin-left:10px;
+        margin-top:20px;
+    }
+     .nav-bar{
+         text-transform: uppercase;
+         font-weight:bold;
+         margin-top: 35px;
+         float:right;
+     }    
+     .nav-bar a{
+         text-decoration: none;
+         padding-right: 45px;
+         color:white;
+         cursor: pointer;
+     }
+     .nav-bar a:hover{
+         color:red;
+     }
+   
+    
+     .Quote-Form{ 
+         position: absolute;
+         top:95%;
+         left:10%;
+         box-sizing: border-box;
+         width:80%;
+         margin:0 auto;
+         height:120px; 
+         background-image:linear-gradient(to right,#9a243e 0,#43264e 72%);
+         z-index: 1;
+     }
+     .Quote-Form .Quote-head{
+         color:white;
+         font-size:20px;
+         padding-top: 5px;
+         padding-left: 75px;
+         letter-spacing:normal;
+         word-spacing: 2px;
+     }
+     .Quote-Form .FF{
+         margin-left:5%;
+         margin-top:2%;
+     }
+     input[type="text"],input[type="email"],input[type="tel"]{
+         background:transparent;
+         border-top-style: hidden;
+         border-left-style: hidden;
+         border-right-style: hidden;
+         color:white;
+         line-height:30px;
+         margin-left:20px;
+         font-size: 18px;
+     }
+     input[type="submit"]{
+         border-style: hidden;
+         font-size: 20px;
+         padding-top:10px;
+         padding-left:15px;
+         padding-bottom: 10px;
+         padding-right: 15px;
+         display:inline-block;
+         margin-left: 30px;
+         color:red;
+         cursor: pointer;
+         vertical-align: baseline;
+         background-color: yellow;
+     }
+     input[type="text"],input[type="email"],input[type="tel"]:focus{
+       outline:none;
+     }
+     /* Section Content area */
+     .content{
+         position: absolute;
+         top:99%;
+         background-color:rgba(0,0,0,1);
+         width:100%;
+         height:500px;
+         box-sizing: border-box;
+     }     
+     .heading{
+         margin-bottom: 50px;
+         font-size: 30px;
+         font-weight: 600;
+         color:white;
+         width: 100%;
+         text-align:center;
+         box-sizing: border-box;
+     }
+     .content .heading .title{ 
+         box-sizing: border-box;
+         padding-top: 100px;
+         color:white;
+         margin-bottom: 10px;
+     }
+     .book{
+         display:flex;
+         flex-direction: row;
+         flex-flow: wrap;
+         justify-content: space-around;
+         color:white;
+         width:100%;
+         margin-bottom:45px;
+         padding-left: 25px;
+
+         box-sizing: border-box;
+     }
+     .book .card{
+       width:25%;
+       margin-bottom: 15px;
+     }
+     .card .img{
+         margin-left:135px;
+         margin-bottom: 20px;
+     }
+     .card p{
+         text-align: center;
+         font-size: 20px;
+         font-weight: bold;
+     }
+     footer{
+         position: static;
+         bottom: 0;
+         background-color:rgba(37,35,33,1);
+         width:100%;
+         height:100px;
+         text-align: center;
+         color:white;
+         padding-top:30px;
+         box-sizing: border-box;
+         font-size: 25px;
+     }
+         @media(max-width:320px)
+         {
+         .img1{
+             background-image: url("image/320img.png");
+         }    
+         .nav-bar{
+             margin-top:20px;
+             
+         }
+         .nav-bar a{
+             padding-right: 20px;
+         }
+         .Quote-Form{
+             height:250px;
+             border-radius:4px;
+             
+         }
+         .Quote-Form .Quote-head{
+             padding-top:2px;
+             padding-left:2px;
+         }
+
+         input[type="text"]{
+          margin-top:5px;
+          margin-left:2px;   
+         }
+         input[type="email"]{
+            margin-top:5px; 
+            margin-left:2px;   
+         }
+         input[type="tel"]{
+             margin-top:5px;
+             margin-left:2px;
+         }
+         input[type="submit"]{
+             margin-top:30px;
+             padding-left:10px;
+             padding-right:10px;
+         }
+         .content{
+             height:1110px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:140px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+
+         .book .card{
+             width:70%;
+         }
+         .book .card  img{
+             margin-left: 35%;
+             margin-bottom: 10px;
+         } 
+         }  
+          @media (min-width:321px) and (max-width:400px)
+        { 
+         .img1{
+           background-image:url("image/375img.png");
+     
+         }
+         .nav-bar{
+             margin-top:25px;
+         } 
+         .Quote-Form{
+             height:265px;
+             border-radius:4px;
+             
+         }
+         .Quote-Form .Quote-head{
+             padding-top:2px;
+             padding-left:2px;
+         }  
+         input[type="submit"]{
+             margin-left:40px;
+             margin-top:25px;
+         }
+         input[type="text"]{
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-top:10px;
+         }
+         .content{
+             height:1125px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:150px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .book .card{
+             width:65%;
+             margin-bottom:35px;
+         }
+         .card .img{
+         margin-left:85px;
+         }
+        
+         .content{
+             height:1110px;
+         }
+         .book{
+             padding-left: 0;
+         }
+     }
+     @media (min-width:401px) and (max-width:450px){
+         .img1{
+             background-image: url("image/500img.png")
+         }
+         .nav-bar{
+             margin-top:20px;
+         }
+        .Quote-Form{
+             width:70%;
+             left:15%;
+             height:290px;
+             border-radius:10px;
+             
+         }
+         .Quote-Form .Quote-head{
+             padding-top:2px;
+             padding-left:2px;
+         }
+         input[type="submit"]{
+             margin-left:40px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:20px;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:20px;
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:20px;
+            margin-top:10px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:70px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .content{
+             height:1115px;
+         }
+         .content .heading{
+           padding-top:140px;
+
+         }
+         .book .card{
+             width:70%;
+         }
+         .book .card img{
+           margin-left:38%;
+         }
+         .card p{
+          padding:0 auto;
+          padding-top: 10px;
+         } 
+     }
+     @media (min-width:451px) and (max-width:500px){
+        .img1{
+             background-image: url("image/500img.png")
+         }
+        .nav-bar{
+             margin-top:20px;
+         }
+        .Quote-Form{
+             width:70%;
+             left:15%;
+             height:290px;
+             border-radius:10px;
+         }
+         .Quote-Form .Quote-head{
+             padding-top:2px;
+             padding-left:2px;
+         }
+         input[type="submit"]{
+             margin-left:60px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:30px;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:30px;
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:30px;
+            margin-top:10px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:70px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .content{
+             height:1115px;
+         }
+         .content .heading{
+           padding-top:140px;
+
+         }
+         .book .card{
+             width:70%;
+         }
+         .book .card img{
+           margin-left:40%;
+         }
+         .card p{
+          padding:0 auto;
+          padding-top: 10px;
+         } 
+     }
+     @media (min-width:501px) and (max-width:511px){
+        .nav-bar{
+             margin-top:20px;
+         }
+        .Quote-Form{
+             width:70%;
+             left:15%;
+             height:290px;
+             border-radius:10px;
+         }
+         .Quote-Form .Quote-head{
+             padding-top:2px;
+             padding-left:2px;
+         }
+         input[type="submit"]{
+             margin-left:65px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:40px;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:40px;
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:40px;
+            margin-top:10px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:70px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .content{
+             height:1115px;
+         }
+         .content .heading{
+           padding-top:140px;
+
+         }
+         .book .card{
+             width:70%;
+         }
+         .book .card img{
+           margin-left:40%;
+         }
+         .card p{
+          padding:0 auto;
+          padding-top: 10px;
+         } 
+     }
+     @media (min-width:512px) and (max-width:580px){
+        .nav-bar{
+             margin-top:35px;
+         }
+        .Quote-Form{
+             width:70%;
+             left:15%;
+             height:290px;
+             border-radius:10px;
+         }
+         .Quote-Form .Quote-head{
+             padding-left: 0;
+            text-align: center;
+         }
+         input[type="submit"]{
+             margin-left:75px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:60px;
+             margin-top:20px;
+         }
+         input[type="email"]{
+            margin-left:60px;
+            margin-top:20px;
+         }
+         input[type="tel"]{
+            margin-left:60px;
+            margin-top:20px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:70px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .content{
+             height:1115px;
+         }
+         .content .heading{
+           padding-top:140px;
+
+         }
+         .book .card{
+             width:70%;
+         }
+         .book .card img{
+           margin-left:40%;
+         }
+         .card p{
+          padding:0 auto;
+          padding-top: 10px;
+         } 
+     }
+     @media (min-width:581px) and (max-width:699px){
+        .nav-bar{
+             margin-top:35px;
+         }
+        .Quote-Form{
+             width:60%;
+             left:20%;
+             height:290px;
+             border-radius:10px;
+         }
+         .Quote-Form .Quote-head{
+             padding-left: 0;
+            text-align: center;
+         }
+         input[type="submit"]{
+             margin-left:85px;
+             margin-top:30px;
+         }
+         input[type="text"]{
+             margin-left:60px;
+             margin-top:20px;
+         }
+         input[type="email"]{
+            margin-left:60px;
+            margin-top:20px;
+         }
+         input[type="tel"]{
+            margin-left:60px;
+            margin-top:20px;
+         }
+         .heading{
+             font-size:15px;
+         }  
+         .heading .title{
+             margin-top:70px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .content{
+             height:1115px;
+         }
+         .content .heading{
+           padding-top:140px;
+
+         }
+         .book .card{
+             width:70%;
+         }
+         .book .card img{
+           margin-left:40%;
+         }
+         .card p{
+          padding:0 auto;
+          padding-top: 10px;
+         } 
+     }
+
+
+     @media (min-width:700px) and (max-width: 768px){
+         .img1{
+             background-image: url("image/768img.png");
+         }
+         .Quote-Form{
+             width:60%;
+             left:20%;
+             height:290px;
+             border-radius: 10px;
+             
+         }
+         .Quote-Form .Quote-head{
+            padding-left: 0;
+            text-align: center;
+
+         }
+         input[type="submit"]{
+             margin-left:105px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:20%;
+             margin-top:15px;
+         }
+         input[type="email"]{
+            margin-left:20%; 
+            margin-top:15px;
+         }
+         input[type="tel"]{
+            margin-left:20%; 
+            margin-top:15px;
+         }
+         .content{
+              height:1145px;
+          }
+         .heading .title{
+            font-size:30px;
+             margin-top:190px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+          .book .card{
+              width:80%;
+              margin-bottom: 50px;
+             
+          }
+          .card .img{
+              margin-left:45%;
+          }
+         
+      }
+     @media (min-width:769px) and (max-width:815px){
+        .Quote-Form{
+             width:60%;
+             left:20%;
+             height:290px;
+             border-radius: 10px;
+             
+         }
+         .Quote-Form .Quote-head{
+            padding-left: 0;
+            text-align: center;
+
+         }
+         input[type="submit"]{
+             margin-left:120px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:25%;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         .content{
+              height:830px;
+          }
+         .heading .title{
+            font-size:30px;
+             margin-top:190px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .book .card{
+             width:40%;
+         }
+         .card .img{
+             margin-left:40%;
+         }
+        
+     }
+     @media (min-width:816px) and (max-width:910px){
+        .Quote-Form{
+             width:60%;
+             left:20%;
+             height:290px;
+             border-radius: 10px;
+             
+         }
+         .Quote-Form .Quote-head{
+            padding-left: 0;
+            text-align: center;
+
+         }
+         input[type="submit"]{
+             margin-left:135px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:25%;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         .content{
+              height:830px;
+          }
+         .heading .title{
+            font-size:30px;
+             margin-top:190px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .book .card{
+             width:40%;
+         }
+         .card .img{
+             margin-left:40%;
+         }
+        
+     }
+     @media (min-width:911px) and (max-width:970px){
+        .Quote-Form{
+             width:50%;
+             left:25%;
+             height:290px;
+             border-radius: 10px;
+             
+         }
+         .Quote-Form .Quote-head{
+            padding-left: 0;
+            text-align: center;
+
+         }
+         input[type="submit"]{
+             margin-left:120px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:20%;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:20%; 
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:20%; 
+            margin-top:10px;
+         }
+         .content{
+              height:830px;
+          }
+         .heading .title{
+            font-size:30px;
+             margin-top:190px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .book .card{
+             width:40%;
+         }
+         .card .img{
+             margin-left:40%;
+         }
+        
+     }
+     @media (min-width:971px) and (max-width:1100px){
+        .Quote-Form{
+             width:50%;
+             left:25%;
+             height:290px;
+             border-radius: 10px;
+             
+         }
+         .Quote-Form .Quote-head{
+            padding-left: 0;
+            text-align: center;
+
+         }
+         input[type="submit"]{
+             margin-left:150px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:25%;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         .content{
+              height:830px;
+          }
+         .heading .title{
+            font-size:30px;
+             margin-top:190px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .book .card{
+             width:40%;
+         }
+         .card .img{
+             margin-left:40%;
+         }
+        
+     }
+     @media (min-width:1101px) and (max-width:1200px){
+        .Quote-Form{
+             width:50%;
+             left:25%;
+             height:290px;
+             border-radius: 10px;
+             
+         }
+         .Quote-Form .Quote-head{
+            padding-left: 0;
+            text-align: center;
+
+         }
+         input[type="submit"]{
+             margin-left:150px;
+             margin-top:45px;
+         }
+         input[type="text"]{
+             margin-left:25%;
+             margin-top:10px;
+         }
+         input[type="email"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         input[type="tel"]{
+            margin-left:25%; 
+            margin-top:10px;
+         }
+         .content{
+              height:830px;
+          }
+         .heading .title{
+            font-size:30px;
+             margin-top:190px;
+         }
+         .heading h3{
+             margin-top:25px;
+         }
+         .book .card{
+             width:40%;
+         }
+         .card .img{
+             margin-left:40%;
+         }
+        
+     }
+     @media (min-width:1201px) and (max-width:1237px){
+         input[type="text"]{
+             margin-left:0px;
+         }
+         input[type="submit"]{
+             margin-left:5px;
+         }
+         .card .img{
+             margin-left:38%;
+         }
+         .Quote-Form{
+            height:120px; 
+         }
+     }    
+     </style>
+</head>
+<body>
+    <header>   
+        <nav>
+          <img src="image/travellogo.png" alt="logo">  
+          <div class="nav-bar"> 
+          <a href="">  Home   </a> 
+          <a href="">  Tour   </a>
+          <a href="">  About  </a>   
+          </div>  
+        
+        </nav>
+        <div class="img1">     
+        </div>
+        <div class="Quote-Form" >
+            <h3 class="Quote-head"> Get the Holiday Planned by the Expert </h3>  
+            <form class="FF">
+                <input type="text" placeholder="name" class="name">      
+                <input type="email" placeholder="email" class="email">
+                <input type="tel" placeholder="Mobile No" class="tel">
+                <input type="submit" class="submit" Value="Get Free Quote">      
+            </form>
+        </div> 
+   </header>  
+   <section class="content">
+   <div class="heading">    
+    <h1 class="title"> Why Book With Us </h1>
+    <h3>________</h3>
+   </div>
+    <div class="book">
+        <div class="card">
+         <img src="image/user.png" alt="User" class="img" >
+         <p>180,000+ </p>
+         <p> visitors from 2006 to date   </p> 
+        </div> 
+       <div class="card">
+            <img src="image/graphic-design.png" alt="User" class="img">  
+            <p> Award-winning Tour Operator </p>
+            <p>    Seven accolades for socially </p> 
+            <p>       responsible tourism               </p>
+         
+
+  
+        </div> 
+        <div class="card">
+            <img src="image/calendar.png" alt="User" class="img"  >
+            <p> Flexible and customizable  </p>
+            <p>   Multiple trip departures and  </p>
+             <p>   customizable itineraries   </p>
+        </div>
+     
+    </div>
+    <footer>
+        Copyright Reserved
+    </footer>
+   </section>
+   
+</body>
+</html>
